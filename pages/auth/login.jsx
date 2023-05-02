@@ -12,6 +12,7 @@ const Login = () => {
   const [success, setSuccess] = useState(false);
   const { login } = useLoginContext();
   const router = useRouter();
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     router.prefetch('/');
@@ -24,12 +25,15 @@ const Login = () => {
 
   const handleLogin = async () => {
     setSuccess(false);
+    setError('');
     const { ok, data } = await login(form);
     if (ok) {
       setSuccess(true);
       // ToDo: Redirect the user to the home page after a successful login.
+      router.push('/');
     } else {
       // ToDo: If the login fails, show the error message returned from the api to the user.
+      setError(data || 'Ha ocurrido otro error');
     }
   };
 
@@ -54,6 +58,7 @@ const Login = () => {
         size="large"
       />
       {success && <p className={styles.success}>Ingreso exitoso</p>}
+      {error && <p className={styles.error}>{error}</p>}
       <Button
         className={styles.button}
         disabled={Object.values(form).some((val) => val === '')}

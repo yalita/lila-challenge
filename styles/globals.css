@@ -22,6 +22,7 @@ body {
 :root {
   --main-color: #b700ff;
   --background-color: #ffffff;
+  --background-color-secondary: #bababa;
   --dark-background-color: #34004a;
   --font-color: #111111;
   --font-family: Poppins, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,

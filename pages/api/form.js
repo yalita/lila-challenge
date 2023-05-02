@@ -28,7 +28,7 @@ const handler = async ({ method, body, headers }, resToFront) => {
           return resToFront
             .status(400)
             .json({ data: "Expected string type at 'files' field" });
-        if (body.files.length === 0)
+        if (body.files?.length === 0)
           return resToFront
             .status(400)
             .json({ data: "Expected non-empty string at 'files' field" });
@@ -41,6 +41,7 @@ const handler = async ({ method, body, headers }, resToFront) => {
     }
   } catch (error) {
     log('ERROR: ', error);
+    console.log(error);
     resToFront.status(500).json({ data: 'Ha ocurrido un error' });
   }
 };
