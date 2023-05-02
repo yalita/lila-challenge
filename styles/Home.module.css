@@ -4,7 +4,18 @@
   background-color: #f5f5f5;
 }
 
-.container_general {
+.headerImg {
+  width: 100%;
+}
+
+.formulario {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.containerGeneral {
   width: 473px;
   height: 591px;
   background: #ffffff;
@@ -16,24 +27,22 @@
   justify-content: space-between;
 }
 
-.container_general h1 {
+.containerGeneral h1 {
   margin-top: 30px;
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 600;
   font-size: 30px;
   line-height: 45px;
-  /* identical to box height */
-
   color: #111111;
 }
 
-.nombre_y_input {
+.subtitulo {
   margin-top: 30px;
   width: 100%;
 }
 
-.nombre_y_input label {
+.subtitulo label {
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 400;
@@ -42,7 +51,7 @@
   color: #111111;
 }
 
-.input_img {
+.nombreImagen {
   box-sizing: border-box;
   width: 100%;
   padding: 15px;
@@ -62,7 +71,7 @@
   margin-top: 30px;
 }
 
-.upload_img {
+.uploadImagen {
   box-sizing: border-box;
   width: 357px;
   height: 163px;
@@ -74,7 +83,7 @@
   justify-content: center;
 }
 
-.upload_img2 {
+.uploadImagen2 {
   box-sizing: border-box;
   width: 357px;
   height: 163px;
@@ -86,7 +95,7 @@
   justify-content: center;
 }
 
-.upload_img p {
+.uploadImagen p {
   margin-top: 35px;
   display: flex;
   justify-content: center;
@@ -95,11 +104,10 @@
   font-weight: 400;
   font-size: 20px;
   line-height: 30px;
-  /* identical to box height */
   color: #bcbcbc;
 }
 
-.upload_img button {
+.uploadImagen button {
   width: 160px;
   height: 33px;
   margin-top: 30px;
@@ -111,12 +119,12 @@
   box-sizing: border-box;
 }
 
-.upload_img2 button {
+.uploadImagen2 button {
   position: relative;
   left: 70px;
 }
 
-.button {
+.deleteButton {
   width: 31px !important;
   height: 31px !important;
   background: #ffffff !important;
@@ -133,7 +141,7 @@
   height: 20px !important;
 }
 
-.file_button {
+.fileButton {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -142,8 +150,6 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
-  /* identical to box height */
-
   color: #b700ff;
 }
 
@@ -167,11 +173,7 @@
   font-size: 20px;
   line-height: 30px;
   background-color: #bcbcbc;
-
-  /* identical to box height */
-
   text-align: center;
-
   color: #ffffff;
 }
 
@@ -189,7 +191,12 @@
   font-size: 20px;
   line-height: 30px;
   text-align: center;
-
   color: #ffffff;
   cursor: pointer;
+}
+
+@media screen and (max-width: 460px) {
+  .containerGeneral {
+    width: 100%;
+  }
 }

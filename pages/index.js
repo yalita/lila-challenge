@@ -83,24 +83,16 @@ function Home() {
 
   return (
     <main className={styles.container}>
-      <Image src={imgHeader} alt="Logo" style={{ width: '100%' }} />
-      <form
-        style={{
-          width: '100%',
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-        }}
-        onSubmit={handleSubmit}
-      >
-        <div className={styles.container_general}>
+      <Image src={imgHeader} alt="Logo" className={styles.headerImg} />
+      <form className={styles.formulario} onSubmit={handleSubmit}>
+        <div className={styles.containerGeneral}>
           <div>
             <h1>¡Subí tu foto!</h1>
             <div>
-              <div className={styles.nombre_y_input}>
+              <div className={styles.subtitulo}>
                 <label>Nombre de la imagen</label>
                 <input
-                  className={styles.input_img}
+                  className={styles.nombreImagen}
                   value={form.name}
                   onChange={handleChangeName}
                   required
@@ -108,9 +100,9 @@ function Home() {
               </div>
               <div className={styles.drap}>
                 {filePreview ? (
-                  <div className={styles.upload_img2}>
+                  <div className={styles.uploadImagen2}>
                     <button
-                      className={styles.button}
+                      className={styles.deleteButton}
                       onClick={handleDeleteFile}
                     >
                       <DeleteOutlineIcon className={styles.deleteIcon} />
@@ -125,13 +117,13 @@ function Home() {
                     onDraggingStateChange={handleDragginChange}
                     required
                   >
-                    <div className={styles.upload_img}>
+                    <div className={styles.uploadImagen}>
                       {!isInZone && (
                         <>
                           <p>Arrastrá la imagen a esta zona</p>
-                          <button className={styles.file_button}>
+                          <button className={styles.fileButton}>
                             Subir archivo
-                            <FileUploadIcon className={styles.icon} />
+                            <FileUploadIcon />
                           </button>
                         </>
                       )}
